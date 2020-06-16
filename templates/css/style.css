@@ -1,0 +1,211 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background: url("https://images.unsplash.com/photo-1578642160456-7f22223a3cd7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+
+}
+/* navigation */
+nav{
+  width:     100%;
+  height:     50px;
+  position:  fixed;
+  top:       0;
+  right:     0;
+  left:      0;
+  background-color: black;
+  text-align: center;
+;
+}
+
+li{
+  list-style: none;
+  display: inline-block;
+ color: white;
+  padding: 24px;
+}
+li{
+  float: ;
+}
+li:hover{
+  background-color: white;
+  color: black;
+}
+ul{
+  margin: -10px;
+}
+.name{
+  float: left;
+}
+/* PAGE  index */
+.div-Container{
+  margin-left : 5em;
+  margin-right : 5em;
+	padding: 20px;
+  /* max-height : 15em; */
+	font-family: sans-serif;
+	font-size: 1em;
+	color: #333;
+
+
+}
+
+.picture-left{
+	float: left;
+  width : 30%;
+}
+.paragraph-right{
+   margin : 40% 10% 20% 40%;
+   margin-top : 150px;
+
+}
+
+
+
+h1,
+h2{
+font-weight: bold;
+color: red;
+font-size: 1.5em;
+font-family: Kurale;
+}
+
+h3{
+	font-weight: bold;
+	font-family: fantasy;
+	font-size: 1.3em;
+	text-align: center;
+	color: black;
+}
+
+.p{
+	line-height: 140%;
+}
+
+
+.orange{
+	background: -webkit-linear-gradient(to right,#ff6239,#fe944a);
+  background: linear-gradient(to right,#ff6239,#fe944a);
+}
+
+.pink {
+	background: -webkit-Linear-gradient(to Right,#FE736D,#FF8F69);
+	background: Linear-gradient(to Right,#FE736D,#FF8F69);
+
+}
+
+.green {
+	background: -webkit-Linear-gradient(to left,#a6fb8d,#0efe5f);
+  background: Linear-gradient(to left,#a6fb8d,#0efe5f);
+}
+.profil-tof{
+    width: 28rem;
+    height: 32.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* *************footer**************************** */
+
+footer {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #9999;
+	padding-top: 2rem;
+	padding-bottom: 1.5rem;
+}
+footer a{
+	color: #9999;
+	font-size: 2rem;
+	transition: all .2s ease-in-out;
+}
+footer a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer{
+	text-align:  center;
+	font-size: 1.2em;
+	color: #fff;
+}
+.contact_me{
+	width: 200px;
+}
+
+
+/* page contact */
+.title{
+	margin-top : 35px;
+	text-align: center;
+	font-size: 2em;
+}
+.contact{
+	background: -webkit-Linear-gradient(to bottom,#485b5a,#457d50);
+  background: Linear-gradient(to bottom,#485b5a,#457d50);
+	color: white;
+
+}
+
+.figcaption-contact {
+    opacity:1;
+    text-align:center;
+    font-size: 1.8rem;
+    background-color: transparent;
+    position: relative;
+}
+
+.contact-moi{
+    width: 4rem;
+    height: 3rem;
+}
+
+
+/* ****projett**** */
+.div-Cont{
+  margin-left : 5em;
+  margin-right : 5em;
+  /* max-height : 15em; */
+	font-family: sans-serif;
+	font-size: 1em;
+	color: #333;
+
+
+}
+
+.picture{
+	float: left;
+  width : 50%;
+}
+a:hover {
+  background-color: yellow;
+}
