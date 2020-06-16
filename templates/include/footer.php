@@ -30,7 +30,7 @@
         </div>
         <hr>
         <div class="footer">
-          <p>Copyrighet</p>
+          <p>Copyright</p>
           <p>Mention légales</p>
           <p>Ferri lynda<br>
             année 2020</p>

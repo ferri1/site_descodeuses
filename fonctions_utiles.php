@@ -180,14 +180,17 @@ function html_a($text, $lien = "#", $class="", $confirm="") {
 
     return "<a href='$lien' class='$class' $confirm >$text</a>";
 }
+  // <a href="accueil.php">aller à l/accueil</a>
+  // echo html_a("Aller à l/accueil", "accueil.php");
 
-function f($str) {
-    // formate une chaine avant de l'enregistrer dans la base.
-    // permet de mettre des guillemets dans ma chaine.
-
-    global $bdd;
-
-
-    return $bdd->quote($str);
-
-}
+// function f($str) {
+//     // formate une chaine avant de l'enregistrer dans la base.
+//     // permet de mettre des guillemets dans ma chaine.
+//
+//
+//     global $bdd;
+//
+//
+//     return $bdd->quote($str);
+//
+// }
