@@ -1,6 +1,7 @@
 <?php
 
 include "fonctions_utiles.php";
+include "fonctions_contenu_front.php";
 $nom_du_site = "Kaouane Lynda";
 session_start();
 

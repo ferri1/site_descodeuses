@@ -13,21 +13,20 @@ show_error();
 show_success();
 ?>
 
-<!-- <div class="intro">
-    Ici vous allez pouvoir modifier le contenu de votre site internet.<br/>
+ <div class="intro">
+    <h2>Ici vous allez pouvoir modifier le contenu de votre site internet.</h2><br/>
 
-    <div class="menu_accueil">
-        <a href="<?php echo RESTO_URL_SITE ?>" target="_blank">Voir le site</a>
-        <a href="<?php echo RESTO_URL_SITE ?>admin/accueil/formulaire_accueil.php">Modifier ma page d'accueil</a>
-        <a href="<?php echo RESTO_URL_SITE ?>admin/menu/menu_lister.php">Ajouter, modifier ou supprimer un menu</a>
+    <div class="projet_accueil">
+        <a href="<?php echo descodeuses_URL_SITE ?>" target="_blank">Voir le site</a>
+        <a href="<?php echo descodeuses_URL_SITE ?>admin/accueil/formulaire_accueil.php">Modifier ma page d'accueil</a>
+        <a href="<?php echo descodeuses_URL_SITE ?>admin/projet/projet_lister.php">Ajouter, modifier ou supprimer un projet</a>
         <a href="#">Ajouter, modifier ou supprimer un utilisateur</a>
-        <a href="<?php echo RESTO_URL_SITE ?>admin/se_deconnecter.php">Se déconnecter</a>
+        <a href="<?php echo descodeuses_URL_SITE ?>admin/se_deconnecter.php">Se déconnecter</a>
     </div>
 
 
 
-</div> -->
+</div>
 
 
-
-<?php include  PATH_TEMPLATE  .  "include/footer.php" ?>
+<?php include "include/footer.php"; ?>

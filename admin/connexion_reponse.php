@@ -19,7 +19,7 @@ if(empty($_POST["identifiant_admin"]) || empty($_POST["motdepasse_admin"])) {
 
     if(!empty($resultatUtilisateur)) { // Si notre requête retourne des résultats (donc que mon tableau n'est pas vide), c'est qu'il y a un utilisateur avec cet identifiant et ce mot de passe.
         $_SESSION["connected_user"] = $resultatUtilisateur[0];
-        changeDePage("accueil.php"); // fonction que j'ai préalablement écrite.
+        changeDePage("index.php"); // fonction que j'ai préalablement écrite.
         exit;
     } else {
         // si je passe ici, c'est que je n'ai pas trouvé d'utilisateur.

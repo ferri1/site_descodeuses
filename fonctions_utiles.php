@@ -67,7 +67,7 @@ function enregistreValeur($iduu, $valeur) {
 
     // 1 - on verifie si la donnée existe déjà dans la table.
 
-    $nbVal = $bdd -> prepare("SELECT count(*) as nbEnregistrement from simpledonnee where iduu = :iduu");
+    $nbVal = $bdd -> prepare("SELECT count(*) as nbEnregistrement from general where iduu = :iduu");
     $nbVal -> execute([":iduu" => $iduu]);
     $resultNbVal =  $nbVal -> fetch(PDO::FETCH_ASSOC);
 
@@ -76,13 +76,13 @@ function enregistreValeur($iduu, $valeur) {
 
         // nous n'avons pas d'enregistrement, nous devons l'insérer dans la base.
 
-        $query = $bdd -> prepare("INSERT into simpledonnee(iduu, valeur) VALUES ( :iduu, :valeur )");
+        $query = $bdd -> prepare("INSERT into general(iduu, valeur) VALUES ( :iduu, :valeur )");
         $query -> execute([":iduu" => $iduu, ":valeur" => $valeur]);
 
 
     } else {
         // l'enregistrement existe, nous devons le mettre à jour.
-        $query = $bdd -> prepare("UPDATE simpledonnee SET valeur=:valeur WHERE iduu = :iduu");
+        $query = $bdd -> prepare("UPDATE general SET valeur=:valeur WHERE iduu = :iduu");
         $query -> execute([":iduu" => $iduu, ":valeur" => $valeur]);
     }
 
@@ -94,7 +94,7 @@ function MontrerValeur($iduu) {
     global $bdd;
 
     // 1 - on verifie si la donnée existe déjà dans la table.
-    $query = $bdd -> prepare("SELECT * from simpledonnee where iduu = :iduu");
+    $query = $bdd -> prepare("SELECT * from general where iduu = :iduu");
     $query -> execute([":iduu" => $iduu]);
     $val = $query ->  fetch(PDO::FETCH_ASSOC);
 
@@ -180,17 +180,3 @@ function html_a($text, $lien = "#", $class="", $confirm="") {
 
     return "<a href='$lien' class='$class' $confirm >$text</a>";
 }
-  // <a href="accueil.php">aller à l/accueil</a>
-  // echo html_a("Aller à l/accueil", "accueil.php");
-
-// function f($str) {
-//     // formate une chaine avant de l'enregistrer dans la base.
-//     // permet de mettre des guillemets dans ma chaine.
-//
-//
-//     global $bdd;
-//
-//
-//     return $bdd->quote($str);
-//
-// }

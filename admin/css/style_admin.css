@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/8/1/5/8150df0c29_58695_martinet-noir-snowmanradio-wiki-cc-20.jpg);
+}
+
+h1{
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-shadow: 2px 3px 2px pink;
+}
+h2{
+  font-size: 1.7em;
+  color: black;
+
+}
+
+
+/*
+
+.erreur {
+    border: darkred 2px solid;
+    color: darkred;
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+.success {
+    border: darkolivegreen 2px solid;
+    color: darkolivegreen;
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+} */
+
+.intro {
+    text-align: center;
+}
+
+.projet_accueil {
+    width: 400px;
+    border: #ccc solid 1px;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.projet_accueil a{
+    display: block;
+    line-height: 4em;
+    text-decoration: none;
+    background-color: #eee;
+    color: #000000;
+    border-bottom: #555555 1px solid;
+}
+
+.projet_accueil a:hover{
+    background-color: #ccc;
+
+}
+
+.form, .list  {
+    width: 500px;
+    border: #c4c4c4 solid 1px;
+    padding: 1em;
+    text-align: center;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.list {
+    text-align: left;
+}
+
+.form textarea{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 2em;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.form input{
+    margin-bottom: 2em;
+}
+
+.field input{
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.mini_image {
+    width: 200px;
+}
+
+.image_admin img{
+    margin-bottom: 2em;
+}
+
+.button {
+    border:#ccc;
+    font-size: 0.8em;
+    color:#888;
+    text-decoration: none;
+    border: 1px #888 solid;
+    padding: 2px 10px;
+}
+
+.projet {
+    border: #ccc solid 1px;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.projet a{
+    text-decoration: none;
+    padding:0 1em;
+    color: #444;
+}
+
+.projet a:hover{
+    text-decoration: underline;
+}
+.footer{
+  text-align: center;
+  background-color: grey;
+}
