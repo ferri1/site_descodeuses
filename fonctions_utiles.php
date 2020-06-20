@@ -142,7 +142,7 @@ function verifierCheminFichier($chemin) {
                 // si il n'y a pas de point dans le nom du dossier, c'est qu'il s'agit d'un dossier
                 // (sinon, c'est un fichier)
                 $verifChemin .= $dossier ."/";
-                var_dump($verifChemin);
+                // var_dump($verifChemin);
                 if(!is_dir($verifChemin)) { // ce n'est pas un dossier, alors nous allons le créer.
                     mkdir($verifChemin);
                 }
@@ -161,7 +161,6 @@ function echoKey($tableau, $cle, $valeurDefaut = "") {
 
 }
 
-
 function html_image($urlImage, $classHtml = "") {
         // on affiche le tag vers l'image seulement si l'image existe.
 
@@ -170,6 +169,7 @@ function html_image($urlImage, $classHtml = "") {
         }
         return "";
 }
+
 
 function html_a($text, $lien = "#", $class="", $confirm="") {
         // fabrique la balise <a href></a>
@@ -180,3 +180,19 @@ function html_a($text, $lien = "#", $class="", $confirm="") {
 
     return "<a href='$lien' class='$class' $confirm >$text</a>";
 }
+
+
+function laTechno ($idTechno) {
+    // retourne toutes les informations de la techno qui a comme identifiant $idTechno
+
+    global $bdd;
+
+    #on prépare la requête en lui donnant une étiquette :idTechno
+    $query = $bdd -> prepare("select * from techno where id_techno = :idTechno");
+
+    #on éxécute la requête
+    $query -> execute([":idTechno" => $idTechno]);
+
+    return $query -> fetch(PDO::FETCH_ASSOC); // on utilise fetch et non fetchAll car nous souhaitons retourner un seul résultat.
+
+};

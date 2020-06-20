@@ -55,7 +55,7 @@ var_dump($bdd->errorinfo());
 }
 
 if(!empty($_FILES)) {
-    enregistrerFichier($_FILES["imageProjet"], "template/img/$projetID.jpg"); // ici on change le chemin d'enregistrement des photos et le nom des dossiers
+    enregistrerFichier($_FILES["imageProjet"], "templates/images/$projetID.jpg"); // ici on change le chemin d'enregistrement des photos et le nom des dossiers
 }
 
 var_dump($_POST);

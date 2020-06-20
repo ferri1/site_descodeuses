@@ -12,8 +12,8 @@ enregistreValeur("TEXTE_ACCUEIL", $_POST["texteAccueil"]);
 
 }
 
-if(!empty($_FILES)) {
-    enregistrerFichier($_FILES["imageAccueil"],  "image/vrac/accueil.jpg");
+if(!empty($_FILES["photo_profil"]) && $_FILES["photo_profil"]["error"] == 0) {
+    enregistrerFichier($_FILES["imageAccueil"], "templates/images/accueil.jpg");
 }
 
 ajouterSuccess("Nous avons enregistré la page d'accueil");
