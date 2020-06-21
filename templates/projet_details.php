@@ -15,7 +15,7 @@
        function tousLesTechno() {
 
            global $bdd;
-           return $bdd -> query("select nom_techno from techno order by id_techno") ->
+           return $bdd -> query("select nom_techno, id_techno from techno order by id_techno") ->
            fetchAll(PDO::FETCH_ASSOC);
 
        }
@@ -25,38 +25,36 @@
     <div class="container-div">
       <h1><?php echo montrerValeur("TITRE_ACCUEIL")?></h1>
       <h1>Je vous presente mes Projets en Ordre</h1>
-<!--A FAIRE si id_techno existe dans le post, afficher les projets correspondants à cet id. Sinon, les afficher comme dessous (voir boutons techno en bas et réflechir à une solution)-->
-        <?php foreach(tousLesProjets() as $projet) {
+      <?php  foreach (tousLesProjets () as $projet) {
 
-          echo "<div class='project'><h2>";
-          echo html_a($projet["nom_projet"], descodeuses_URL_SITE . "projet_seul.php?projetAAfficher=$projet[id_projet]");
+        echo "<div class='project'><h2>";
+        echo html_a($projet["nom_projet"], descodeuses_URL_SITE . "projet_seul.php?projetAAfficher=$projet[id_projet]");
 
-          echo "</h2><div class='affichage_techno'>$projet[technos]</div>";
+      echo "</h2><div class='affichage_techno'>$projet[technos]</div>";
 
-          echo  html_image("$projet[url_image]", "image_project");
+      echo html_image("$projet[url_image]", "image_project");
 
-          echo "</div>";
-        }
+      echo "</div>";
+    }
+
     ?>
 
+  </div>
 
-        <form class="" action="index.php" >
 
-</form>
     <div class="liste_techno">
       <h3>Ou selectionnez une technologie pour voir les projets</h3>
       <ul>
-
         <?php foreach( tousLesTechno() as $techno ) {
-            echo "<form action='techno_formulaire_reponse.php' method='post'><input type='hidden' name='id_techno'></form>";
+            echo "<form action='projet_par_techno.php' method='post'><input type='hidden' name='id_techno'></form>";
             echo "<li>";
-            echo html_a($techno["nom_techno"]);
+            echo html_a($techno["nom_techno"], "projet_par_techno.php?technoAAfficher=$techno[id_techno]");
             echo "</li>";
         }
         ?>
       </ul>
     </div>
-  </div>
+
 
 
 

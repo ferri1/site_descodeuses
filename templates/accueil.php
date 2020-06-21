@@ -57,7 +57,7 @@
                   </ul>
               </div>
               <div class="profil">
-                  <img class="profil-tof" src="<?php echo URL_TEMPLATE ?>images/lynda2.jpg" alt="">
+                  <img class="profil-tof" src="<?php echo URL_TEMPLATE ?>images/htmlcss.png" alt="">
 
               </div>
 
