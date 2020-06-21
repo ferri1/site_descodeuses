@@ -29,3 +29,25 @@ if(empty($_POST["identifiant_admin"]) || empty($_POST["motdepasse_admin"])) {
         exit;
     }
 }
+
+$arrayName = array();
+$email=htmlspecialchars($_POST['email']);
+$password=htmlspecialchars($_POST['password']);
+
+//script permet de vérifié que email existe et valide sous format ttttttt@gmail.com
+if(!empty($email) && filter_var($email,FILTER_VALIDATE_EMAIL)){
+	echo "lyncaferri07@gmail.com";
+}else{
+	echo "l'adresse non valide";
+}
+
+
+//Vérification du mot de passe et le cripter avant l'envoi à la base de données ;
+
+//vérifié que lattibut mot de passe est saisie par l'internaut
+if(!empty($password)){
+	 //hacher le mot de passe
+	$passwordHacher=password_hash($password, PASSWORD_DEFAULT);
+	echo "Le mot de passe hacher est : ".$password;
+
+}
