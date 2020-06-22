@@ -5,6 +5,8 @@ include "../config.php";
 // on verifie que j'ai bien mes envoyé des données.
 
 if(empty($_POST["identifiant_admin"]) || empty($_POST["motdepasse_admin"])) {
+  echo $passwordHacher=password_hash($_POST[motdepasse_admin], PASSWORD_DEFAULT);
+  echo "Le mot de passe hacher est : ".$_POST[motdepasse_admin];
     ajouterErreur("Merci de vous connecter");
 } else {
 
@@ -30,17 +32,17 @@ if(empty($_POST["identifiant_admin"]) || empty($_POST["motdepasse_admin"])) {
     }
 }
 
-$arrayName = array();
-$email=htmlspecialchars($_POST['email']);
-$password=htmlspecialchars($_POST['password']);
-
-//script permet de vérifié que email existe et valide sous format ttttttt@gmail.com
-if(!empty($email) && filter_var($email,FILTER_VALIDATE_EMAIL)){
-	echo "lyncaferri07@gmail.com";
-}else{
-	echo "l'adresse non valide";
-}
-
+// $arrayName = array();
+// $email=htmlspecialchars($_POST['email']);
+// $password=htmlspecialchars($_POST['password']);
+//
+// //script permet de vérifié que email existe et valide sous format ttttttt@gmail.com
+// if(!empty($email) && filter_var($email,FILTER_VALIDATE_EMAIL)){
+// 	echo "lyncaferri07@gmail.com";
+// }else{
+// 	echo "l'adresse non valide";
+// }
+//
 
 //Vérification du mot de passe et le cripter avant l'envoi à la base de données ;
 
